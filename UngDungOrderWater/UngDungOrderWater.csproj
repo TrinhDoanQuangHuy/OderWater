@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B5C4574-7D63-4845-A6F4-0779B87871E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UngDungOrderWater</RootNamespace>
+    <AssemblyName>UngDungOrderWater</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.SpellChecker.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v24.1, Version=24.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpellChecker.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrandHighLand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrandHighLand.Designer.cs">
+      <DependentUpon>BrandHighLand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrandPhucLong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrandPhucLong.Designer.cs">
+      <DependentUpon>BrandPhucLong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrandStarBuck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrandStarBuck.Designer.cs">
+      <DependentUpon>BrandStarBuck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrandTheCoffeeHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrandTheCoffeeHouse.Designer.cs">
+      <DependentUpon>BrandTheCoffeeHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhGiaCuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhGiaCuaKhachHang.Designer.cs">
+      <DependentUpon>FormDanhGiaCuaKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHoTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoTro.Designer.cs">
+      <DependentUpon>FormHoTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LichSuDonHang.cs" />
+    <Compile Include="LichSuMuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichSuMuaHang.Designer.cs">
+      <DependentUpon>LichSuMuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1\Drink.cs" />
+    <Compile Include="Model1\Model1.cs" />
+    <Compile Include="MuaHangHoa.cs" />
+    <Compile Include="OrderNuocDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderNuocDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderNuocDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderNuocDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BrandHighLand.resx">
+      <DependentUpon>BrandHighLand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrandPhucLong.resx">
+      <DependentUpon>BrandPhucLong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrandStarBuck.resx">
+      <DependentUpon>BrandStarBuck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrandTheCoffeeHouse.resx">
+      <DependentUpon>BrandTheCoffeeHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhGiaCuaKhachHang.resx">
+      <DependentUpon>FormDanhGiaCuaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHoTro.resx">
+      <DependentUpon>FormHoTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichSuMuaHang.resx">
+      <DependentUpon>LichSuMuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyReport1.rdlc" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="OrderNuocDataSet.xsc">
+      <DependentUpon>OrderNuocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrderNuocDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderNuocDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderNuocDataSet.xss">
+      <DependentUpon>OrderNuocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrderNuocDataSet1.xsc">
+      <DependentUpon>OrderNuocDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="OrderNuocDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderNuocDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderNuocDataSet1.xss">
+      <DependentUpon>OrderNuocDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BrandHighLand.datasource" />
+    <None Include="Properties\DataSources\BrandPhucLong.datasource" />
+    <None Include="Properties\DataSources\BrandStarBuck.datasource" />
+    <None Include="Properties\DataSources\BrandTheCoffeeHouse.datasource" />
+    <None Include="Properties\DataSources\FormDanhGiaCuaKhachHang.datasource" />
+    <None Include="Properties\DataSources\FormHoTro.datasource" />
+    <None Include="Properties\DataSources\FormLichSuMuaHang.datasource" />
+    <None Include="Properties\DataSources\FormThanhToan.datasource" />
+    <None Include="Properties\DataSources\LichSuDonHang.datasource" />
+    <None Include="Properties\DataSources\MuaHangHoa.datasource" />
+    <None Include="Properties\DataSources\OrderNuocDataSet.datasource" />
+    <None Include="Properties\DataSources\OrderNuocDataSet.DrinksDataTable.datasource" />
+    <None Include="Properties\DataSources\OrderNuocDataSet.DrinksRow.datasource" />
+    <None Include="Properties\DataSources\OrderNuocDataSet.DrinksRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\OrderNuocDataSet.DrinksRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Report.datasource" />
+    <None Include="Properties\DataSources\ShoppingCart.datasource" />
+    <None Include="Properties\DataSources\SqlServerTypes.Utilities.datasource" />
+    <None Include="Properties\DataSources\TrangChu.datasource" />
+    <None Include="Properties\DataSources\UngDungOrderWater.OrderNuocDataSetTableAdapters.DrinksTableAdapter.datasource" />
+    <None Include="Properties\DataSources\UngDungOrderWater.OrderNuocDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\UngDungOrderWater.OrderNuocDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\UngDungOrderWater.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\UngDungOrderWater.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\462640476_927582275941234_4639736953362584260_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpht.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo RGB-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
